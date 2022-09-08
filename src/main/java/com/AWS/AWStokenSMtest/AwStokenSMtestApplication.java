@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication(exclude = ContextStackAutoConfiguration.class)
 public class AwStokenSMtestApplication {
@@ -18,6 +19,7 @@ public class AwStokenSMtestApplication {
 	
 	}
 	
+	@Bean
 	public void getKeys() {
 		System.out.println("Private Key: " +appConfig.getSecret().getPubkey());
 		System.out.println("Public Key:  " +appConfig.getSecret().getPrikey());

@@ -28,13 +28,11 @@ public class AppConfig {
     @Bean
     public String returnPublicKey() {
     	Keys  secrets = getSecret();
-    	System.out.println("private key: " + secrets.getPubkey());
     	return secrets.getPubkey();
     }
     @Bean
     public String returnPrivateKey() {
     	Keys  secrets = getSecret();
-    	System.out.println("private key: " + secrets.getPrikey());
     	return secrets.getPrikey();
     }
     
